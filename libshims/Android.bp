@@ -1,0 +1,51 @@
+// Charge_only
+cc_library {
+    name: "libmemset_shim",
+    vendor: true,
+    target: {
+        android_arm: {
+            srcs: ["memset32.S"],
+            sanitize: {
+                misc_undefined: ["integer"],
+            },
+        },
+        android_arm64: {
+            srcs: ["android_memset.S"],
+            sanitize: {
+                misc_undefined: ["integer"],
+            },
+        },
+    },
+}
+
+cc_library {
+    name: "libcomparetf2",
+    srcs: ["comparetf2.c"],
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_library {
+    name: "libdemangle",
+    vendor: true,
+    include_dirs: [
+        "external/libcxx/include",
+        "external/libcxxabi/include",
+        "external/libcxxabi/src",
+    ],
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+    cppflags: [
+        "-std=c++14",
+        "-fexceptions",
+        "-Wextra",
+        "-Wno-unused-function",
+        "-Wno-implicit-fallthrough",
+        // src/cxa_demangle.cpp:2591 -Wimplicit-fallthrough
+    ],
+    srcs: [
+        "cxa_demangle.cpp"
+    ],
+}
