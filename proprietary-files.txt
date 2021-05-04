@@ -58,9 +58,6 @@ vendor/lib64/sensors.tof.vl53l1.so
 vendor/lib/modules/stmvl53l1.ko
 vendor/lib/libvl53l1_daemon.so
 vendor/lib64/libvl53l1_daemon.so
-vendor/lib64/sensors.hal.tof.so
-vendor/lib64/sensors.tof.so
-vendor/lib/sensors.tof.so
 
 # Camera-actuators
 vendor/lib/libactuator_mot_dw9714k.so
@@ -247,11 +244,9 @@ vendor/etc/sensors/sns_reg_config
 vendor/bin/sensors.qti
 vendor/lib/libsensorcal.so
 vendor/lib/libssc.so
-vendor/lib/sensors.dt.so
 vendor/lib/sensors.ssc.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libssc.so
-vendor/lib64/sensors.dt.so
 vendor/lib64/sensors.ssc.so
 
 # Thermal
