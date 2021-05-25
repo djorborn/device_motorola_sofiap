@@ -26,7 +26,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_sofiap
-PRODUCT_DEVICE := sofiap_sprout
+PRODUCT_DEVICE := sofiap
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto G Pro
 PRODUCT_MANUFACTURER := motorola
@@ -39,9 +39,9 @@ TARGET_SCREEN_HEIGHT := 2300
 TARGET_SCREEN_WIDTH := 1080
 
 # Build info
-BUILD_FINGERPRINT := "motorola/sofiap_ao/sofiap_sprout:11/RPRS31.Q4U-20-30/4ad40:user/release-keys"
+BUILD_FINGERPRINT := "motorola/sofiap_ao/sofiap:11/RPRS31.Q4U-20-30/4ad40:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=sofiap_sprout \
-    PRIVATE_BUILD_DESC="sofiap_sprout-user 10 RPRS31.Q4U-20-30 4ad40 release-keys"
+    PRODUCT_NAME=sofiap \
+    PRIVATE_BUILD_DESC="sofiap-user 10 RPRS31.Q4U-20-30 4ad40 release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
